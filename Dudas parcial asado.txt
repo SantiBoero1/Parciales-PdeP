@@ -1,0 +1,10 @@
+Dentro de las dudas generales, queria saber si plantee bien el punto 1 y di una solucion correcta, esa es la mayor
+duda que poseo.
+Despues tengo las siguientes
+
+Punto 1
+Al cambiar de posicion, cambian los elementos cerca tambien? o solo la posicion?
+
+punto 2
+
+- Como se hace lo de alternado? Como hago para que se alterne algo? Hay un metodo?

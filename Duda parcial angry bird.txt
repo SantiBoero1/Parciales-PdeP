@@ -1,0 +1,15 @@
+Esta bien modelar a los distintos pajaros como clases?
+Al principio pensamos en objetos, pero como sus valores de ira no son aclarados, no podemos inicializarlos con cualquiera
+Por lo que pensamos en hacerlo con clases que hereden de la clase Pajaro, y de esa manera cuando se instancie un pajaro,
+Se debe colocar su ira
+
+
+Duda en punto 2
+
+- Fiesta sorpresa
+
+- Serie de eventos
+
+Duda en punto 3
+
+Como hacer el punto B

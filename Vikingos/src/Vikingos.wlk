@@ -1,5 +1,6 @@
 import Expediciones.*
 import Castas.*
+import Lugares.*
 
 class Vikingo {
 	var property castaSocial

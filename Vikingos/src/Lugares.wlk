@@ -1,3 +1,8 @@
+import Expediciones.*
+import Vikingos.*
+import Castas.*
+
+
 class Lugar{
 	method serInvadidoPor(expedicion){
 		expedicion.repartirBotin(self.botin(expedicion.cantidadIntegrantes()))

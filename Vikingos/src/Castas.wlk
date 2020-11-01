@@ -1,5 +1,6 @@
 import Vikingos.*
 import Expediciones.*
+import Lugares.*
 
 class Casta{
 	method puedeIrA(unVikingo,unaExpedicion){

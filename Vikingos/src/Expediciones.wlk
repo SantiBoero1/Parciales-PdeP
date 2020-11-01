@@ -1,6 +1,7 @@
 import Vikingos.*
 import Castas.*
-
+import Lugares.*
+ 
 class Expedicion{
 	const property integrantes = #{}
 	var objetivos = []

@@ -1,5 +1,5 @@
 import Packs.*
-import example.*
+import Telefonia.*
 
 class Consumo {
 	var property dia

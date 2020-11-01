@@ -2,7 +2,6 @@ import Packs.*
 import Consumos.*
 
 class Linea{
-	var numeroDeTelefono
 	var packsActivos = #{}
 	var consumos = []
 	var hoy = new Date()

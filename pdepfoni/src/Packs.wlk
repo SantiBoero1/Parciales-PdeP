@@ -1,4 +1,5 @@
-import example.*
+import Telefonia.*
+import Consumos.*
 
 class Credito {
 	var creditoDisponible

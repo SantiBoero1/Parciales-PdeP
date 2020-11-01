@@ -38,5 +38,8 @@ class Expedicion{
 	method agregarObjetivo(unObjetivo){
 		objetivos.add(unObjetivo)
 	}
-	)
+	
+	
+	// Para agregar un nuevo objetivo castillo, este debe ser polimórfico con los otros objetivos existentes. No hace falta modificar código existente, siempre y cuando se implementen los mensajes valeLaPenaPara, botin, y serInvadidoPor (y siempre y cuando no necesite más cosas del vikingo para resolver esos métodos, en cuyo caso convendría pasar el vikingo por parámetro)
+	
 }

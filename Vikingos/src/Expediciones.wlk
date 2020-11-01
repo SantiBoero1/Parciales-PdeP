@@ -3,6 +3,8 @@ import Castas.*
 
 class Expedicion{
 	const property integrantes = #{}
+	var objetivos = []
+	
 	
 	// Punto 1
 	method subirAExpedicion(unVikingo){
@@ -12,7 +14,29 @@ class Expedicion{
 		else integrantes.add(unVikingo)
 	}
 	
+	// Punto 2
 	method valeLaPena(unaExpedicion){
-		unaExpedicion.all({lugar => lugar.valeLaPena(vikingos)})
+		unaExpedicion.all({lugar => lugar.valeLaPena(self.cantidadIntegrantes())})
 	}
+	
+	method realizarExpedicion(){
+		objetivos.forEach({objetivo => objetivo.serInvadidoPor(self)})
+	}
+	
+	method cantidadIntegrantes(){
+		return integrantes.size()
+	}
+	
+	method repartirBotin(unaCantidad){
+		integrantes.forEach({integrante => integrante.sumarCantidad(unaCantidad  / self.cantidadIntegrantes())})
+	}
+	
+	method aumentarVidasCobradasEn(unaCantidad){
+		unaCantidad.times(n => integrantes.forEach({integrante => integrante.cobrarVida()})
+	}
+	
+	method agregarObjetivo(unObjetivo){
+		objetivos.add(unObjetivo)
+	}
+	)
 }

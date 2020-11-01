@@ -5,21 +5,31 @@ class Casta{
 	method puedeIrA(unVikingo,unaExpedicion){
 		return true
 	}
+	
+	
 }
 
-class Jarl inherits Casta{
+object jarl inherits Casta{
 	
 	override method puedeIrA(unVikingo,unaExpedicion){
 		return !unVikingo.tieneArmas()
 	}
-}
-
-class Karl inherits Casta{
 	
+	method ascender(unVikingo){
+		unVikingo.castaSocial(karl)
+		unVikingo.bonificarAscenso()
+	}
+}
+
+object karl inherits Casta{
+	
+	method ascender(unVikingo){
+		unVikingo.castaSocial(thrall)
+	}
 
 }
 
-class Thrall inherits Casta{
+object thrall inherits Casta{
 	
 	
 }

@@ -2,7 +2,8 @@ import Expediciones.*
 import Castas.*
 
 class Vikingo {
-	var castaSocial
+	var property castaSocial
+	var property botin = 0
 	
 	method puedeIrALaExpedicion(unaExpedicion){
 		return self.esProductivo() && castaSocial.puedeIrA(self,unaExpedicion)
@@ -10,17 +11,35 @@ class Vikingo {
 	
 	method esProductivo()
 	
+	method ascender(){
+		castaSocial.ascender(self)
+	}
+	
+	method sumarCantidad(unaCantidad){
+		botin += unaCantidad
+	}
+	
+	method cobrarVida(){}
+	
 }
 
 class Soldado inherits Vikingo {
 	var cantVidasCobradas
-	var armas = []
+	var armas
 
-	method esProductivo(){
+	override method esProductivo(){
 		return cantVidasCobradas > 20 && self.tieneArmas()
 }
 	method tieneArmas(){
-		return armas.size() > 0
+		return armas > 0
+	}
+	
+	method bonificarAscenso(){
+		armas += 10
+	}
+	
+	override method cobrarVida(){
+		cantVidasCobradas += 1
 	}
 
 }
@@ -29,11 +48,16 @@ class Granjero inherits Vikingo{
 	var cantDeHijos
 	var cantDeHectareas
 	
-	method esProductivo(){
+	override method esProductivo(){
 		return cantDeHectareas >= cantDeHijos * 2
 	}
 	
 	method tieneArmas(){
 		return false
+	}
+	
+	method bonificarAscenso(){
+		cantDeHijos += 2
+		cantDeHectareas += 2
 	}
 }

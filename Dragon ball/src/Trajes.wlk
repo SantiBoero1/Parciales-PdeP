@@ -12,6 +12,10 @@ class Traje{
 		return nivelDeDesgaste == 100
 	}
 	
+	method cantidadDePiezas(){
+		return 1
+	}
+	
 }
 
 class Comun inherits Traje{
@@ -60,7 +64,7 @@ class Modular inherits Traje{
 		return piezas.all({pieza => pieza.estaGastada()})
 	}
 	
-	method cantidadDePiezas(){
+	override method cantidadDePiezas(){
 		return piezas.size()
 	}
 	

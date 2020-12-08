@@ -1,0 +1,7 @@
+Punto rangos
+No se me ocurre como crear la restriccion de que solo haya un Don
+
+Tuve una encrucijada con un tema. Pense en que los rangos hereden de una clase rango los dos metodos que tienen en comun
+Para no repetir la logica. Pero hay un problema y es que los soldados siempre empiezan si o si con una escopeta,
+por lo que no puedo colocarle la variable armas en la clase que hereda, porque es distinto, y me da conflictos.
+Estaria mal dejarlo asi en cada uno?

@@ -1,0 +1,8 @@
+3.a No se como hacer para identificar al mas ebrio (Existe el metodo max)
+3.b Lo que hice con el error esta bien? la parte del else	(No, modificarlo para que no consuma la moneda, sino que retorne un valor)
+
+4.b no se que quiere que haga, si identificar a los que son de la corona o que 	(Son otros tipos)
+
+5.b
+
+6

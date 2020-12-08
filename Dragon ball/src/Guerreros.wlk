@@ -3,13 +3,12 @@ class Guerrero{
 	var experiencia
 	var energiaInicial
 	var energiaActual
-	var estaMuerto
 	var traje
 	
 	
 	method atacarA(unGuerrero){
 		unGuerrero.disminuirEnergia(potencial)
-		unGuerrero.aumentarExperienciaEn(1)
+		self.aumentarExperienciaEn(1)
 		unGuerrero.seDesgastaSuTraje()
 	}
 	

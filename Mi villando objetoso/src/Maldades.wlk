@@ -45,7 +45,7 @@ object congelar inherits Maldad{
 	}
 }
 
-object robar inherits Maldad{
+class Robar inherits Maldad{
 	
 	var objetivo
 	

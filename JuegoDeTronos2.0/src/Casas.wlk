@@ -8,18 +8,23 @@ class Casa{
 	
 	method puedeCasarseCon(unMiembro,otraPersona)
 	
-	// - Punto 4 - //
+	// - Punto 4A - //
 	
 	method esRica(){
 		return patrimonio > 1000
 	}
 	
-	// - Punto 5 - //
+	// - Punto 5A - //
 	
 	method patrimonioIndividual(){
 		return patrimonio / miembros.size()
 	}
 	
+	// - Punto 2B - //
+	
+	method miembros(){
+		return miembros
+	}	
 }
 
 object lannister inherits Casa{

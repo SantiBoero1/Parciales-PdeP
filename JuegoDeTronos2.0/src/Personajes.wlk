@@ -1,4 +1,5 @@
 import Casas.*
+import Acompaniantes.*
 
 class Personaje{
 	
@@ -15,7 +16,7 @@ class Personaje{
 		return casa != stark
 	}
 	
-	// - Punto 2 - //
+	// - Punto 2A - //
 	
 	method puedenCasarse(unaPersona){
 		return self.lePermitenCasarseCon(unaPersona) && unaPersona.lePermitenCasarseCon(self)
@@ -25,7 +26,7 @@ class Personaje{
 		return casa.puedeCasarseCon(self,unaPersona)
 	}
 	
-	// - Punto 3 - //
+	// - Punto 3A - //
 	
 	method realizarCasamiento(unaPersona){
 		self.validarCasamiento(unaPersona)
@@ -43,9 +44,43 @@ class Personaje{
 		conyuges.add(unaPersona)
 	}
 	
-	// - Punto 5 - //
+	// - Punto 5A - //
 	
 	method patrimonio(){
 		return casa.patrimonioIndividual()
+	}
+	
+	
+	// - Punto 1B - //
+	method estaSolo(){
+		return acompaniantes.isEmpty()
+	}
+	
+	// - Punto 2B - // 
+	
+	method aliados(){
+		return acompaniantes + conyuges + casa.miembros()
+	}
+	
+	// - Punto 3B - //
+	
+	method esPeligroso(){
+		return estaVivo && (self.poseeAliadosAdinerados() || self.conyugesSonRicos() || self.poseeAlianzaPeligrosa())
+	}
+	
+	method poseeAliadosAdinerados(){
+		return self.aliados().sum({aliado => aliado.patrimonio()}) >= 10000
+	}
+	
+	method conyugesSonRicos(){
+		return conyuges.map({conyuge => conyuge.esDeCasaRica()})
+	}
+	
+	method esDeCasaRica(){
+		return casa.esRica()
+	}
+	
+	method poseeAlianzaPeligrosa(){
+		return self.aliados().any({aliado => aliado.esPeligroso()})
 	}
 }

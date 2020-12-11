@@ -3,10 +3,16 @@ import Casas.*
 
 object sutil {
 	
+	const casas = #{stark,lannister,guardia}
+	
 	method realizarAccion(unaVictima){
-		var casaMasPobre = continente.laCasaMasPobre()
-		var unaPersona = casaMasPobre.miembroVivoYSoltero()
+		const casaMasPobre = self.laCasaMasPobre()
+		const unaPersona = casaMasPobre.miembroVivoYSoltero()
 		unaVictima.realizarCasamiento(unaPersona)
+	}
+	
+	method laCasaMasPobre(){
+		return casas.min({casa => casa.patrimonio()})
 	}
 }
 

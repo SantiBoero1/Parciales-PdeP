@@ -66,12 +66,3 @@ object guardia inherits Casa{
 		return false
 	}
 }
-
-object continente{
-	
-	var casas = #{lannister,stark,guardia}
-	
-	method laCasaMasPobre(){
-		return casas.min({casa => casa.patrimonio()})
-	}
-}

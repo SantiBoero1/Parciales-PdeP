@@ -28,6 +28,18 @@ class Villano{
 		unaMaldad.seleccionarMinionsAptos(minions)
 		unaMaldad.realizarseEn(ciudad)
 	}
+	
+	// - Punto 3A - //
+	
+	method minionMasUtil(){
+		return minions.max({minion => minion.cantMaldadesHechas()})
+	}
+	
+	// - Punto 3B - //
+	
+	method minionsInutiles(){
+		return minions.filter({minion => minion.noRealizoMaldades()})
+	}
 }
 
 class Ciudad{

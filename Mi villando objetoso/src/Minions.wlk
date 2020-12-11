@@ -41,6 +41,19 @@ class Minion {
 	method poseeRayoEncogedor(){
 		return armas.contains(rayoEncogedor)
 	}
+	
+	method sumarMaldad(){
+		cantDeMaldadesHechas += 1
+	}
+	
+	// - Punto 3 - // 
+	method cantMaldadesHechas(){
+		return cantDeMaldadesHechas
+	}
+	
+	method noRealizoMaldades(){
+		return cantDeMaldadesHechas == 0
+	}
 }
 
 object violeta inherits Minion{

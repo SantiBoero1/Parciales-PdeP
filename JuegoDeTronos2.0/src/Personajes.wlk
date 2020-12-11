@@ -7,6 +7,7 @@ class Personaje{
 	const conyuges = #{}
 	var estaVivo = true
 	var acompaniantes = []
+	var personalidad
 	
 	method noEstaCasado(){
 		return conyuges.isEmpty()
@@ -82,5 +83,31 @@ class Personaje{
 	
 	method poseeAlianzaPeligrosa(){
 		return self.aliados().any({aliado => aliado.esPeligroso()})
+	}
+	
+	// - Punto C - //
+	
+	method conspirarContra(unaVictima){
+		personalidad.realizarAccion(unaVictima)
+	}
+	
+	method morir(){
+		estaVivo = false
+	}
+	
+	method estaSola(){
+		return self.aliados().isEmpty() 
+	}
+	
+	method derrocharFortuna(unPorcentaje){
+		casa.perderPatrimonio(unPorcentaje)
+	}
+	
+	method esAliadoDe(unaPersona){
+		return unaPersona.esAliado(self)
+	}
+	
+	method esAliado(unaPersona){
+		return self.aliados().contains(unaPersona)
 	}
 }

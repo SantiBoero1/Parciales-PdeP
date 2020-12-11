@@ -25,6 +25,24 @@ class Casa{
 	method miembros(){
 		return miembros
 	}	
+	
+	// - Punto C - //
+	
+	method miembroVivoYSoltero(){
+		return self.miembrosVivos().miembrosSolteros().anyOne()
+	}
+	
+	method miembrosVivos(){
+		return miembros.filter({miembro => miembro.estaVivo()})
+	}
+	
+	method miembrosSolteros(){
+		return miembros.filter({miembro => miembro.noEstaCasado()})
+	}
+	
+	method perderPatrimonio(unPorcentaje){
+		patrimonio = patrimonio - (patrimonio * 10 / 100)
+	}
 }
 
 object lannister inherits Casa{
@@ -46,5 +64,14 @@ object guardia inherits Casa{
 	
 	override method puedeCasarseCon(unMiembro,otraPersona){
 		return false
+	}
+}
+
+object continente{
+	
+	var casas = #{lannister,stark,guardia}
+	
+	method laCasaMasPobre(){
+		return casas.min({casa => casa.patrimonio()})
 	}
 }
